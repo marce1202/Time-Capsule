@@ -6,6 +6,113 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
+   <style>
+    /* Page background so you can SEE the menu floating */
+    body{
+      margin:0;
+      height:100vh;
+      background:#e9edf2;
+      font-family: Arial, sans-serif;
+    }
+
+    /* THE FLOATING TOOLBAR */
+    ul[role="menu"]{
+      list-style:none;
+      margin:0;
+      padding:6px 0;
+      width:200px;
+
+      /* Make it float */
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+
+      /* Make it look like a toolbar */
+      background: #ffffff;
+      border: 1px solid #cfcfcf;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Each menu row */
+    ul[role="menu"] > li{
+      padding:10px 12px;
+      cursor:pointer;
+      position: relative; /* important for dropdown placement */
+    }
+
+    /* Hover highlight */
+    ul[role="menu"] > li:hover{
+      background:#f2f2f2;
+    }
+
+    /* Link style */
+    ul[role="menu"] a{
+      text-decoration:none;
+      color:#111;
+      display:block;
+    }
+
+    /* Submenu (dropdown) default hidden */
+    ul[role="menu"] ul[role="menu"]{
+      display:none;
+      position:absolute;
+      top:0;
+      left:200px;  /* makes it open to the right */
+      width:200px;
+
+      margin:0;
+      padding:6px 0;
+      background:#fff;
+      border: 1px solid #cfcfcf;
+      border-radius:10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Show submenu when hovering "Sort by" */
+    ul[role="menu"] > li:hover > ul[role="menu"]{
+      display:block;
+    }
+
+    /* Submenu items */
+    ul[role="menu"] ul[role="menu"] li{
+      padding:10px 12px;
+      cursor:pointer;
+    }
+
+    ul[role="menu"] ul[role="menu"] li:hover{
+      background:#f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- YOUR MENU CODE (same structure) -->
+  <ul role="menu" style="width: 200px">
+    <li role="menuitem" tabindex="0" aria-haspopup="true">View</li>
+
+    <li role="menuitem" tabindex="0" aria-haspopup="true">
+      Sort by
+      <ul role="menu">
+        <li role="menuitem"><a href="#menu">Name</a></li>
+        <li role="menuitem"><a href="#menu">Size</a></li>
+        <li role="menuitem"><a href="#menu">Item type</a></li>
+        <li role="menuitem"><a href="#menu">Date modified</a></li>
+      </ul>
+    </li>
+
+    <li role="menuitem"><a href="#menu">Refresh</a></li>
+    <li role="menuitem"><a href="#menu">Paste</a></li>
+    <li role="menuitem"><a href="#menu">Paste shortcut</a></li>
+    <li role="menuitem"><a href="#menu">Screen resolution</a></li>
+    <li role="menuitem"><a href="#menu">Gadgets</a></li>
+    <li role="menuitem"><a href="#menu">Personalize</a></li>
+  </ul>
+
+</body>
+</html>
 
 <body>
 
