@@ -10,3 +10,69 @@ body {
 
   background-color: white;
 }
+/* 1) Only the TOP menu floats */
+ul[role="menu"] {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  width: 200px;
+
+  position: fixed;
+  top: 160px;
+  left: 80px;
+  z-index: 9999;
+
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 2) Menu rows */
+ul[role="menu"] > li {
+  padding: 10px 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+ul[role="menu"] > li:hover {
+  background: #f2f2f2;
+}
+
+ul[role="menu"] a {
+  text-decoration: none;
+  color: #111;
+  display: block;
+}
+
+/* 3) IMPORTANT: nested submenu should NOT be fixed */
+ul[role="menu"] ul[role="menu"] {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  width: 200px;
+
+  position: absolute;   /* <-- this fixes your problem */
+  top: 0;
+  left: 200px;
+
+  display: none;        /* hidden until hover */
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 4) Show dropdown when hovering "Sort by" */
+ul[role="menu"] > li:hover > ul[role="menu"] {
+  display: block;
+}
+
+/* 5) Submenu items */
+ul[role="menu"] ul[role="menu"] li {
+  padding: 10px 12px;
+}
+
+ul[role="menu"] ul[role="menu"] li:hover {
+  background: #f2f2f2;
+}
