@@ -3,80 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>My Front Page</title>
+
   <link rel="stylesheet" href="style.css">
+
   <style>
-html, body, * {
-  cursor: url("cursors/oth589.cur"), auto !important;
-}
+    html, body, * {
+      cursor: url("cursors/oth589.cur"), auto !important;
+    }
 
-a, button, input, label {
-  cursor: url("cursors/oth589.cur"), pointer !important;
-}
-</style>
-<nav style="
-  position: fixed;
-  top: 140px;
-  left: 40px;
-  ...
-">
+    a, button, input, label {
+      cursor: url("cursors/oth589.cur"), pointer !important;
+    }
+  </style>
 </head>
-  <br>
-  <br>
-  <div style="margin-bottom: 10000px;">
-  <!-- floating toolbar -->
 
-</body>
+<body>
+
+  <!-- FLOATING TOOLBAR -->
+  <nav style="
+    position: fixed;
+    top: 160px;   /* moved DOWN */
+    left: 80px;   /* moved toward left-center */
+    width: 200px;
+    background: #c0c0c0;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+  ">
+
+    <div style="
+      background: navy;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 4px;
+      margin-bottom: 6px;
+    ">
+      Navigation
+    </div>
+
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
+      <input type="radio" name="nav" onclick="location.href='index.html'"> Home
+    </label>
+
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
+      <input type="radio" name="nav" onclick="location.href='readings.html'"> Readings
+    </label>
+
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
+      <input type="radio" name="nav" onclick="location.href='portfolio.html'"> Portfolio
+    </label>
+
+  </nav>
+
+  <!-- PAGE CONTENT -->
   <h1>Welcome to my site</h1>
-
- <body>
-
   <h1>My Homepage</h1>
 
   <!-- menu here -->
   <ul role="menu" style="width: 200px">
-    ...
+    <li>Menu item</li>
   </ul>
-</head>
-  <body>
-   <nav style="
-  position: fixed;
-  top: 60px;
-  left: 60px;
-  width: 200px;
-  background: #c0c0c0;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 black;
-  padding: 6px;
-  font-family: Arial, sans-serif;
-  z-index: 9999;
-">
 
-  <div style="
-    background: navy;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 4px;
-    margin-bottom: 6px;
-  ">
-    Navigation
-  </div>
-
-  <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-    <input type="radio" name="nav" onclick="location.href='index.html'"> Home
-  </label>
-
-  <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-    <input type="radio" name="nav" onclick="location.href='readings.html'"> Readings
-  </label>
-
-  <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-    <input type="radio" name="nav" onclick="location.href='portfolio.html'"> Portfolio
-  </label>
-
-</nav>
- 
-
-
-  </body>
+</body>
 </html>
