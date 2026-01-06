@@ -14,22 +14,25 @@
     a, button, input, label {
       cursor: url("cursors/oth589.cur"), pointer !important;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- FLOATING TOOLBAR -->
+  <!-- FLOATING NAV TOOLBAR (LEFT BOX) -->
   <nav style="
     position: fixed;
     top: 160px;
-    left: 80px;
+    left: 35%;
     width: 200px;
     background: #c0c0c0;
     border: 2px solid black;
     box-shadow: 2px 2px 0 black;
     padding: 6px;
-    font-family: Arial, sans-serif;
     z-index: 9999;
   ">
 
@@ -58,23 +61,47 @@
 
   </nav>
 
-  <!-- PAGE CONTENT -->
-  <h1>Welcome to my site</h1>
-  <h1>My Homepage</h1>
+  <!-- SECOND BOX (RIGHT MENU) -->
+  <ul role="menu" style="
+    position: fixed;
+    top: 160px;
+    left: 50%;
+    width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    background: #ffffff;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+  ">
+    <li style="padding:10px;">View</li>
 
-  <!-- MENU (must be inside body) -->
-  <ul role="menu" style="width: 200px">
-    <li role="menuitem" tabindex="0" aria-haspopup="true">View</li>
-    <li role="menuitem" tabindex="0" aria-haspopup="true">
+    <li style="padding:10px;">
       Sort by
-      <ul role="menu">
-        <li role="menuitem"><a href="#menu">Name</a></li>
-        <li role="menuitem"><a href="#menu">Size</a></li>
-        <li role="menuitem"><a href="#menu">Item type</a></li>
-        <li role="menuitem"><a href="#menu">Date modified</a></li>
+      <ul role="menu" style="
+        list-style:none;
+        padding:6px 0;
+        margin-top:6px;
+        border-top:1px solid #ccc;
+      ">
+        <li style="padding:8px;"><a href="#menu">Name</a></li>
+        <li style="padding:8px;"><a href="#menu">Size</a></li>
+        <li style="padding:8px;"><a href="#menu">Item type</a></li>
+        <li style="padding:8px;"><a href="#menu">Date modified</a></li>
       </ul>
     </li>
-    <li role="menuitem"><a href="#menu">Refresh</a></li>
-    <li role="menuitem"><a href="#menu">Paste</a></li>
-    <li role="menuitem"><a href="#menu">Paste shortcut</a></li>
-    <li role="menuitem"><a href="#menu">S
+
+    <li style="padding:10px;"><a href="#menu">Refresh</a></li>
+    <li style="padding:10px;"><a href="#menu">Paste</a></li>
+    <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
+    <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
+    <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
+    <li style="padding:10px;"><a href="#menu">Personalize</a></li>
+  </ul>
+
+  <!-- PAGE CONTENT -->
+  <h1 style="margin-top: 40px;">Welcome to my site</h1>
+  <h1>My Homepage</h1>
+
+</body>
+</html>
