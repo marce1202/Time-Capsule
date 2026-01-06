@@ -17,13 +17,15 @@
 
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- FLOATING NAV TOOLBAR (LEFT BOX) -->
+  <!-- LEFT NAV TOOLBAR -->
   <nav style="
     position: fixed;
     top: 160px;
@@ -61,50 +63,51 @@
 
   </nav>
 
-  <!-- SECOND BOX (RIGHT MENU) -->
-  <div>
-  <ul role="menu" style="
+  <!-- RIGHT CONTEXT MENU -->
+  <div style="
     position: fixed;
     top: 160px;
     left: 30%;
     width: 200px;
-    list-style: none;
-    margin: 0;
-    padding: 6px 0;
     background: #ffffff;
     border: 2px solid black;
     box-shadow: 2px 2px 0 black;
+    z-index: 9999;
   ">
-  </div>
-  <div>
-    <li style="padding:10px;">View</li>
+    <ul role="menu" style="
+      list-style: none;
+      margin: 0;
+      padding: 6px 0;
+    ">
+      <li style="padding:10px;">View</li>
 
-    <li style="padding:10px;">
-      Sort by
-      <ul role="menu" style="
-        list-style:none;
-        padding:6px 0;
-        margin-top:6px;
-        border-top:1px solid #ccc;
-      ">
-        <li style="padding:8px;"><a href="#menu">Name</a></li>
-        <li style="padding:8px;"><a href="#menu">Size</a></li>
-        <li style="padding:8px;"><a href="#menu">Item type</a></li>
-        <li style="padding:8px;"><a href="#menu">Date modified</a></li>
-      </ul>
-    </li>
+      <li style="padding:10px;">
+        Sort by
+        <ul role="menu" style="
+          list-style:none;
+          padding:6px 0;
+          margin:6px 0 0 0;
+          border-top:1px solid #ccc;
+        ">
+          <li style="padding:8px;"><a href="#menu">Name</a></li>
+          <li style="padding:8px;"><a href="#menu">Size</a></li>
+          <li style="padding:8px;"><a href="#menu">Item type</a></li>
+          <li style="padding:8px;"><a href="#menu">Date modified</a></li>
+        </ul>
+      </li>
 
-    <li style="padding:10px;"><a href="#menu">Refresh</a></li>
-    <li style="padding:10px;"><a href="#menu">Paste</a></li>
-    <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
-    <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
-    <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
-    <li style="padding:10px;"><a href="#menu">Personalize</a></li>
-  </ul>
+      <li style="padding:10px;"><a href="#menu">Refresh</a></li>
+      <li style="padding:10px;"><a href="#menu">Paste</a></li>
+      <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
+      <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
+      <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
+      <li style="padding:10px;"><a href="#menu">Personalize</a></li>
+    </ul>
   </div>
+
   <!-- PAGE CONTENT -->
-  <h1 style="margin-top: 40px;">Welcome to my site</h1>
-  <h1>My Homepage</h1>
+  <h1 style="margin-top: 40px; padding-left: 10%;">Welcome to my site</h1>
+  <h1 style="padding-left: 10%;">My Homepage</h1>
 
 </body>
 </html>
