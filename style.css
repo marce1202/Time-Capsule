@@ -1,4 +1,4 @@
-/* ===== Page background ===== */
+/* ===== Background + base ===== */
 body {
   background-image: url("background.jpg");
   background-size: cover;
@@ -10,73 +10,135 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ===== Right context menu box (the big white one) ===== */
-#contextMenu {
+/* ===== Left Toolbar (blue header stays the same) ===== */
+.leftToolbar {
+  position: fixed;
+  top: 160px;
+  left: 10%;
+  width: 200px;
+  background: #c0c0c0;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 black;
+  padding: 6px;
+  z-index: 9999;
+}
+
+.leftToolbarTitle {
+  background: navy;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+  margin-bottom: 6px;
+}
+
+.navOption {
+  display: block;
+  border: 1px solid black;
+  background: #eaeaea;
+  padding: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.navOption input {
+  margin-right: 8px;
+}
+
+/* ===== Right Context Menu Box ===== */
+.contextMenu {
   position: fixed;
   top: 160px;
 
-  /* Move this number to push it more to the right */
-  left: 34%;
+  /* ✅ Move this number to move the big box right */
+  left: 38%;
 
-  width: 200px;
+  width: 240px;
   background: #ffffff;
   border: 2px solid black;
   box-shadow: 2px 2px 0 black;
   z-index: 9999;
 }
 
-/* ===== Only the TOP menu floats (inside the big white box) ===== */
-#contextMenu ul[role="menu"] {
+/* Remove default list look */
+.menu {
   list-style: none;
   margin: 0;
   padding: 6px 0;
 }
 
-/* Menu rows */
-#contextMenu ul[role="menu"] > li {
+.menuItem {
   padding: 10px 12px;
-  cursor: pointer;
+  border-bottom: 1px solid #e5e5e5;
   position: relative;
 }
 
-#contextMenu ul[role="menu"] > li:hover {
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
   background: #f2f2f2;
 }
 
-#contextMenu ul[role="menu"] a {
-  text-decoration: none;
+/* links inside menu */
+.menuItem a {
   color: #111;
+  text-decoration: none;
   display: block;
 }
 
-/* Nested submenu should NOT be fixed */
-#contextMenu ul[role="menu"] ul[role="menu"] {
+/* ===== Submenu ===== */
+.hasSubmenu::after {
+  content: "►";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.submenu {
   list-style: none;
   margin: 0;
   padding: 6px 0;
-  width: 200px;
+  width: 220px;
 
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 240px; /* matches .contextMenu width */
 
   display: none;
   background: #fff;
-  border: 1px solid #cfcfcf;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 black;
 }
 
-/* Show dropdown when hovering "Sort by" */
-#contextMenu ul[role="menu"] > li:hover > ul[role="menu"] {
+.hasSubmenu:hover .submenu {
   display: block;
 }
 
-/* Submenu items */
-#contextMenu ul[role="menu"] ul[role="menu"] li {
+.submenuItem {
   padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-#contextMenu ul[role="menu"] ul[role="menu"] li:hover {
+.submenuItem:last-child {
+  border-bottom: none;
+}
+
+.submenuItem:hover {
   background: #f2f2f2;
+}
+
+.submenuItem a {
+  color: #111;
+  text-decoration: none;
+  display: block;
+}
+
+/* ===== Page content spacing so it doesn't sit under boxes ===== */
+.pageContent {
+  padding-top: 40px;
+  padding-left: 10%;
 }
