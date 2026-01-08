@@ -1,113 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Front Page</title>
+<!-- RIGHT CONTEXT MENU -->
+<div id="contextMenu">
+  <ul role="menu">
+    <li style="padding:10px;">View</li>
 
-  <link rel="stylesheet" href="style.css">
+    <li style="padding:10px;">
+      Sort by
+      <ul role="menu" style="
+        list-style:none;
+        padding:6px 0;
+        margin:6px 0 0 0;
+        border-top:1px solid #ccc;
+      ">
+        <li style="padding:8px;"><a href="#menu">Name</a></li>
+        <li style="padding:8px;"><a href="#menu">Size</a></li>
+        <li style="padding:8px;"><a href="#menu">Item type</a></li>
+        <li style="padding:8px;"><a href="#menu">Date modified</a></li>
+      </ul>
+    </li>
 
-  <style>
-    html, body, * {
-      cursor: url("cursors/oth589.cur"), auto !important;
-    }
-
-    a, button, input, label {
-      cursor: url("cursors/oth589.cur"), pointer !important;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- LEFT NAV TOOLBAR -->
-  <nav style="
-    position: fixed;
-    top: 160px;
-    left: 10%;
-    width: 200px;
-    background: #c0c0c0;
-    border: 2px solid black;
-    box-shadow: 2px 2px 0 black;
-    padding: 6px;
-    z-index: 9999;
-  ">
-
-    <div style="
-      background: navy;
-      color: white;
-      font-size: 12px;
-      font-weight: bold;
-      padding: 4px;
-      margin-bottom: 6px;
-    ">
-      Navigation
-    </div>
-
-    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-      <input type="radio" name="nav" onclick="location.href='index.html'"> Home
-    </label>
-
-    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-      <input type="radio" name="nav" onclick="location.href='readings.html'"> Readings
-    </label>
-
-    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
-      <input type="radio" name="nav" onclick="location.href='portfolio.html'"> Portfolio
-    </label>
-
-  </nav>
-
-  <!-- RIGHT CONTEXT MENU -->
-  <div style="
-    position: fixed;
-    top: 160px;
-    left: 30%;
-    width: 200px;
-    background: #ffffff;
-    border: 2px solid black;
-    box-shadow: 2px 2px 0 black;
-    z-index: 9999;
-  ">
-    <ul role="menu" style="
-      list-style: none;
-      margin: 0;
-      padding: 6px 0;
-    ">
-      <li style="padding:10px;">View</li>
-
-      <li style="padding:10px;">
-        Sort by
-        <ul role="menu" style="
-          list-style:none;
-          padding:6px 0;
-          margin:6px 0 0 0;
-          border-top:1px solid #ccc;
-        ">
-          <li style="padding:8px;"><a href="#menu">Name</a></li>
-          <li style="padding:8px;"><a href="#menu">Size</a></li>
-          <li style="padding:8px;"><a href="#menu">Item type</a></li>
-          <li style="padding:8px;"><a href="#menu">Date modified</a></li>
-        </ul>
-      </li>
-
-      <li style="padding:10px;"><a href="#menu">Refresh</a></li>
-      <li style="padding:10px;"><a href="#menu">Paste</a></li>
-      <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
-      <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
-      <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
-      <li style="padding:10px;"><a href="#menu">Personalize</a></li>
-    </ul>
-  </div>
-
-  <!-- PAGE CONTENT -->
-  <h1 style="margin-top: 40px; padding-left: 10%;">Welcome to my site</h1>
-  <h1 style="padding-left: 10%;">My Homepage</h1>
-
-</body>
-</html>
+    <li style="padding:10px;"><a href="#menu">Refresh</a></li>
+    <li style="padding:10px;"><a href="#menu">Paste</a></li>
+    <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
+    <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
+    <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
+    <li style="padding:10px;"><a href="#menu">Personalize</a></li>
+  </ul>
+</div>
