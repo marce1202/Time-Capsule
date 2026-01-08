@@ -45,104 +45,6 @@ body {
   margin-right: 8px;
 }
 
-/* ===== Right Context Menu Box ===== */
-.contextMenu {
-  position: fixed;
-  top: 160px;
-
-  /* ✅ Move this number to move the big box right */
-  left: 38%;
-
-  width: 240px;
-  background: #ffffff;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 black;
-  z-index: 9999;
-}
-
-/* Remove default list look */
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 6px 0;
-}
-
-.menuItem {
-  padding: 10px 12px;
-  border-bottom: 1px solid #e5e5e5;
-  position: relative;
-}
-
-.menuItem:last-child {
-  border-bottom: none;
-}
-
-.menuItem:hover {
-  background: #f2f2f2;
-}
-
-/* links inside menu */
-.menuItem a {
-  color: #111;
-  text-decoration: none;
-  display: block;
-}
-
-/* ===== Submenu ===== */
-.hasSubmenu::after {
-  content: "►";
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-.submenu {
-  list-style: none;
-  margin: 0;
-  padding: 6px 0;
-  width: 220px;
-
-  position: absolute;
-  top: 0;
-  left: 240px; /* matches .contextMenu width */
-
-  display: none;
-  background: #fff;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 black;
-}
-
-.hasSubmenu:hover .submenu {
-  display: block;
-}
-
-.submenuItem {
-  padding: 10px 12px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.submenuItem:last-child {
-  border-bottom: none;
-}
-
-.submenuItem:hover {
-  background: #f2f2f2;
-}
-
-.submenuItem a {
-  color: #111;
-  text-decoration: none;
-  display: block;
-}
-
-/* ===== Page content spacing so it doesn't sit under boxes ===== */
-.pageContent {
-  padding-top: 40px;
-  padding-left: 10%;
-}
-
 /* ===== FIXED TITLE (does not move) ===== */
 #fixedTitle {
   position: fixed;
@@ -173,3 +75,4 @@ body {
   margin-top: 6px;
   color: rgb(30, 70, 190); /* blue */
 }
+
