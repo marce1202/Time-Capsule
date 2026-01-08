@@ -1,28 +1,72 @@
-<!-- RIGHT CONTEXT MENU -->
-<div id="contextMenu">
-  <ul role="menu">
-    <li style="padding:10px;">View</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Front Page</title>
 
-    <li style="padding:10px;">
-      Sort by
-      <ul role="menu" style="
-        list-style:none;
-        padding:6px 0;
-        margin:6px 0 0 0;
-        border-top:1px solid #ccc;
-      ">
-        <li style="padding:8px;"><a href="#menu">Name</a></li>
-        <li style="padding:8px;"><a href="#menu">Size</a></li>
-        <li style="padding:8px;"><a href="#menu">Item type</a></li>
-        <li style="padding:8px;"><a href="#menu">Date modified</a></li>
-      </ul>
-    </li>
+  <link rel="stylesheet" href="style.css" />
 
-    <li style="padding:10px;"><a href="#menu">Refresh</a></li>
-    <li style="padding:10px;"><a href="#menu">Paste</a></li>
-    <li style="padding:10px;"><a href="#menu">Paste shortcut</a></li>
-    <li style="padding:10px;"><a href="#menu">Screen resolution</a></li>
-    <li style="padding:10px;"><a href="#menu">Gadgets</a></li>
-    <li style="padding:10px;"><a href="#menu">Personalize</a></li>
-  </ul>
-</div>
+  <style>
+    html, body, * {
+      cursor: url("cursors/oth589.cur"), auto !important;
+    }
+    a, button, input, label {
+      cursor: url("cursors/oth589.cur"), pointer !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT NAV TOOLBAR (stays where it is) -->
+  <nav class="leftToolbar">
+    <div class="leftToolbarTitle">Navigation</div>
+
+    <label class="navOption">
+      <input type="radio" name="nav" onclick="location.href='index.html'"> Home
+    </label>
+
+    <label class="navOption">
+      <input type="radio" name="nav" onclick="location.href='readings.html'"> Readings
+    </label>
+
+    <label class="navOption">
+      <input type="radio" name="nav" onclick="location.href='portfolio.html'"> Portfolio
+    </label>
+  </nav>
+
+
+  <!-- RIGHT CONTEXT MENU (big white box) -->
+  <div id="contextMenu" class="contextMenu">
+    <ul class="menu" role="menu">
+      <li class="menuItem">View</li>
+
+      <li class="menuItem hasSubmenu">
+        Sort by
+        <ul class="submenu" role="menu">
+          <li class="submenuItem"><a href="#menu">Name</a></li>
+          <li class="submenuItem"><a href="#menu">Size</a></li>
+          <li class="submenuItem"><a href="#menu">Item type</a></li>
+          <li class="submenuItem"><a href="#menu">Date modified</a></li>
+        </ul>
+      </li>
+
+      <li class="menuItem"><a href="#menu">Refresh</a></li>
+      <li class="menuItem"><a href="#menu">Paste</a></li>
+      <li class="menuItem"><a href="#menu">Paste shortcut</a></li>
+      <li class="menuItem"><a href="#menu">Screen resolution</a></li>
+      <li class="menuItem"><a href="#menu">Gadgets</a></li>
+      <li class="menuItem"><a href="#menu">Personalize</a></li>
+    </ul>
+  </div>
+
+
+  <!-- PAGE CONTENT -->
+  <main class="pageContent">
+    <h1>Welcome to my site</h1>
+    <h1>My Homepage</h1>
+  </main>
+
+</body>
+</html>
