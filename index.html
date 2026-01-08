@@ -1,158 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>My Front Page</title>
 
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    html, body, * { cursor: url("cursors/oth589.cur"), auto !important; }
-    a, button, input, label { cursor: url("cursors/oth589.cur"), pointer !important; }
-
+    html, body, * {
+      cursor: url("cursors/oth589.cur"), auto !important;
+    }
+    a, button, input, label {
+      cursor: url("cursors/oth589.cur"), pointer !important;
+    }
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      min-height: 100vh;
-      background: white;
-      /* optional background image */
-      background-image: url("background.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
     }
+  </style>
+</head>
 
-    /* LEFT NAV TOOLBAR */
-    .leftToolbar{
-      position: fixed;
-      top: 160px;
-      left: 10%;
-      width: 200px;
-      background: #c0c0c0;
-      border: 2px solid black;
-      box-shadow: 2px 2px 0 black;
-      padding: 6px;
-      z-index: 9999;
-    }
-    .leftToolbarTitle{
+<body>
+
+  <!-- LEFT NAV TOOLBAR (blue box stays same) -->
+  <nav style="
+    position: fixed;
+    top: 160px;
+    left: 10%;
+    width: 200px;
+    background: #c0c0c0;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+    padding: 6px;
+    z-index: 9999;
+  ">
+
+    <div style="
       background: navy;
       color: white;
       font-size: 12px;
       font-weight: bold;
       padding: 4px;
       margin-bottom: 6px;
-    }
-    .navOption{
-      display: block;
-      border: 1px solid black;
-      background: #eaeaea;
-      padding: 6px;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-    .navOption input{ margin-right: 8px; }
+    ">
+      Navigation
+    </div>
 
-    /* RIGHT CONTEXT MENU BIG BOX */
-    .contextMenu{
-      position: fixed;
-      top: 160px;
-      left: 38%;           /* move this to push it right */
-      width: 240px;
-      background: #fff;
-      border: 2px solid black;
-      box-shadow: 2px 2px 0 black;
-      z-index: 9999;
-    }
-
-    .menu{ list-style:none; margin:0; padding:6px 0; }
-    .menuItem{
-      padding: 10px 12px;
-      border-bottom: 1px solid #e5e5e5;
-      position: relative;
-    }
-    .menuItem:last-child{ border-bottom:none; }
-    .menuItem:hover{ background:#f2f2f2; }
-    .menuItem a{ color:#111; text-decoration:none; display:block; }
-
-    .hasSubmenu::after{
-      content:"►";
-      position:absolute;
-      right:10px;
-      top:10px;
-      font-size:12px;
-      opacity:0.7;
-    }
-
-    .submenu{
-      list-style:none;
-      margin:0;
-      padding:6px 0;
-      width: 220px;
-      position:absolute;
-      top:0;
-      left:240px;          /* matches big box width */
-      display:none;
-      background:#fff;
-      border:2px solid black;
-      box-shadow:2px 2px 0 black;
-    }
-    .hasSubmenu:hover .submenu{ display:block; }
-    .submenuItem{
-      padding: 10px 12px;
-      border-bottom:1px solid #e5e5e5;
-    }
-    .submenuItem:last-child{ border-bottom:none; }
-    .submenuItem:hover{ background:#f2f2f2; }
-    .submenuItem a{ color:#111; text-decoration:none; display:block; }
-
-    .pageContent{ padding-top:40px; padding-left:10%; }
-  </style>
-</head>
-
-<body>
-
-  <nav class="leftToolbar">
-    <div class="leftToolbarTitle">Navigation</div>
-
-    <label class="navOption">
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
       <input type="radio" name="nav" onclick="location.href='index.html'"> Home
     </label>
 
-    <label class="navOption">
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
       <input type="radio" name="nav" onclick="location.href='readings.html'"> Readings
     </label>
 
-    <label class="navOption">
+    <label style="display:block; border:1px solid black; background:#eaeaea; padding:4px; margin-bottom:4px;">
       <input type="radio" name="nav" onclick="location.href='portfolio.html'"> Portfolio
     </label>
+
   </nav>
 
-  <div class="contextMenu">
-    <ul class="menu" role="menu">
-      <li class="menuItem">View</li>
+  <!-- RIGHT CONTEXT MENU (big white box moved right) -->
+  <div id="contextMenu" style="
+    position: fixed;
+    top: 160px;
+    left: 38%;
+    width: 200px;
+    background: #ffffff;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+    z-index: 9999;
+  ">
+    <ul role="menu">
+      <li>View</li>
 
-      <li class="menuItem hasSubmenu">
+      <li>
         Sort by
-        <ul class="submenu" role="menu">
-          <li class="submenuItem"><a href="#menu">Name</a></li>
-          <li class="submenuItem"><a href="#menu">Size</a></li>
-          <li class="submenuItem"><a href="#menu">Item type</a></li>
-          <li class="submenuItem"><a href="#menu">Date modified</a></li>
+        <ul role="menu" style="border-top:1px solid #ccc; margin-top:6px;">
+          <li><a href="#menu">Name</a></li>
+          <li><a href="#menu">Size</a></li>
+          <li><a href="#menu">Item type</a></li>
+          <li><a href="#menu">Date modified</a></li>
         </ul>
       </li>
 
-      <li class="menuItem"><a href="#menu">Refresh</a></li>
-      <li class="menuItem"><a href="#menu">Paste</a></li>
-      <li class="menuItem"><a href="#menu">Paste shortcut</a></li>
-      <li class="menuItem"><a href="#menu">Screen resolution</a></li>
-      <li class="menuItem"><a href="#menu">Gadgets</a></li>
-      <li class="menuItem"><a href="#menu">Personalize</a></li>
+      <li><a href="#menu">Refresh</a></li>
+      <li><a href="#menu">Paste</a></li>
+      <li><a href="#menu">Paste shortcut</a></li>
+      <li><a href="#menu">Screen resolution</a></li>
+      <li><a href="#menu">Gadgets</a></li>
+      <li><a href="#menu">Personalize</a></li>
     </ul>
   </div>
 
-  <main class="pageContent">
-    <h1>Welcome to my site</h1>
-    <h1>My Homepage</h1>
-  </main>
+  <!-- PAGE CONTENT -->
+  <h1 style="margin-top: 40px; padding-left: 10%;">Welcome to my site</h1>
+  <h1 style="padding-left: 10%;">My Homepage</h1>
 
 </body>
 </html>
+
