@@ -75,4 +75,26 @@ body {
   margin-top: 6px;
   color: rgb(30, 70, 190); /* blue */
 }
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* Background color */
+  background-color: #faf7f2;
+
+  /* Thick cream divider lines */
+  background-image:
+    linear-gradient(#efe2c6, #efe2c6),   /* TOP */
+    linear-gradient(#efe2c6, #efe2c6);   /* LEFT */
+
+  background-size:
+    100% 12px,
+    12px 100%;
+
+  background-position:
+    top left,
+    top left;
+
+  background-repeat: no-repeat;
+}
 
